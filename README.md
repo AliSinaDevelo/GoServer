@@ -17,11 +17,10 @@ This is a basic web server written in Go that handles simple form submissions an
    cd your-repo
 
 2. Run the server:
-
-  ```bash
-  go run main.go
-
-The Server will start on port 8080
+   
+   ```bash
+   go run main.go
+  
 
 3. Access the following endpoints in your web browser or through a tool like curl or httpie:
 
@@ -33,3 +32,4 @@ The Server will start on port 8080
 
 ## License
   This project is licensed under the MIT License.
+

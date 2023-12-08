@@ -6,6 +6,19 @@ import (
 	"net/http"
 )
 
+func hello_handler(w http.ResponseWriter, r *http.Request) {
+	if r.URL.Path != "/hello" {
+		http.Error(w, "404 NOT FOUND!", http.StatusNotFound)
+		return
+	}
+	if r.Method != "GET" {
+		http.Error(w, "method not supported!", http.StatusNotFound)
+		return
+	}
+
+	fmt.Fprintf(w, "Howdy!")
+}
+
 func main() {
 	// check on the static directory
 	file_server := http.FileServer(http.Dir("./static"))
